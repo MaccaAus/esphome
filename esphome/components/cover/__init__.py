@@ -38,11 +38,15 @@ cover_ns = cg.esphome_ns.namespace("cover")
 Cover = cover_ns.class_("Cover", cg.Nameable)
 
 COVER_OPEN = cover_ns.COVER_OPEN
+COVER_OPENING = cover_ns.COVER_OPENING
 COVER_CLOSED = cover_ns.COVER_CLOSED
+COVER_CLOSING = cover_ns.COVER_CLOSING
 
 COVER_STATES = {
     "OPEN": COVER_OPEN,
+    "OPENING": COVER_OPENING,
     "CLOSED": COVER_CLOSED,
+    "CLOSING": COVER_CLOSING
 }
 validate_cover_state = cv.enum(COVER_STATES, upper=True)
 
